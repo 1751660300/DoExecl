@@ -128,6 +128,14 @@ public class LoadEexcel2 {
         }
     }
 
+    public static void hbMoreRows(HSSFSheet hssfSheet, ArrayList<Integer> datas){
+        /*
+        * hssfSheet: 表格对象
+        * datas: 合并的左上单元格坐标,右下角单元格坐标,如第第1行,第1列到第2行,第2列 [0,0,1,1]
+        * */
+        hssfSheet.addMergedRegion(new CellRangeAddress(datas.get(0),datas.get(2),datas.get(1), datas.get(3)));
+    }
+
 
 
 }

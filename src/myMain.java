@@ -60,28 +60,28 @@ public class myMain {
 //            [[[]],     [[]]]
             ArrayList<ArrayList<ArrayList<Integer>>> hbCellNum = new ArrayList();
 
-            hbCellNum.add(new ArrayList<>());
 
             for (int i = 0; i < 2; i++){
                 ArrayList<ArrayList<Integer>> rowData = new ArrayList();
                 rowData.add(new ArrayList<Integer>());
+                rowData.add(new ArrayList<Integer>());
                 hbCellNum.add(rowData);
             }
+
+//            hbCellNum.get(0).get(0).add(2);
+//            hbCellNum.get(0).get(0).add(3);
+//            hbCellNum.get(0).get(1).add(8);
+//            hbCellNum.get(0).get(1).add(9);
+//
+//            hbCellNum.get(1).get(0).add(3);
+//            hbCellNum.get(1).get(0).add(4);
+//            hbCellNum.get(1).get(1).add(9);
+//            hbCellNum.get(1).get(1).add(10);
+
+            System.out.printf("数据赋值完成");
+
             LoadEexcel2.setTemplateData(xssfSheet,addRows,data,hbCellNum);
 
-//            int max = xssfSheet.getLastRowNum();
-//            int y = 0;
-//            for (int i = 0; i < max; i++) {
-//                if (i == 5 || i==6) {
-//                    LoadEexcel2.addRow(xssfSheet, i, (ArrayList<String>) l1.get(y++));
-//                    max ++;
-//                }
-//
-//                if (i == 8+2 || i == 9+2) {
-//                    LoadEexcel2.addRow(xssfSheet, i, (ArrayList<String>) l1.get(y++));
-//                    max ++;
-//                }
-//            }
 
             HSSFRow lastHssfRow = xssfSheet.getRow(xssfSheet.getLastRowNum()-1);
 
